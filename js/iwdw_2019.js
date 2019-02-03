@@ -77,7 +77,7 @@ $(document).ready(function(){
         <hr width="100%" noshade id="line"/>\
         <div class="text indentation">\
             <p>Special session proposals are invited to IWDW 2019, and inquiries regarding your submission should be directed to the General Chair.\
-                The proposal needs to be submitted to the General Chair (Hongxia Wang, <a>hxwang@scu.edu.cn</a>) by 15 August, 2019.</p>\
+                The proposal needs to be submitted to the General Chair (Hongxia Wang, <a>hxwang@scu.edu.cn</a>) by 1 July, 2019.</p>\
         </div>\
         </div>';
 
