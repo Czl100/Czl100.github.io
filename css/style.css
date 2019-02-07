@@ -87,6 +87,11 @@ table td{
 	text-indent: 2em;
 	text-align: justify;
 }
+.no-indentation {
+	line-height:2em;
+	word-break: keep-all;
+	text-align: justify;
+}
 /*文本环绕*/
 .float img, .float_left{
 	float: left;
@@ -380,10 +385,6 @@ footer{
 	color:#004aaa;
 }
 	
-#accormado-img img{
-	margin:10px;
-	width:auto;
-}
 #trans-img img{
 	margin:0 10px;
 	width:auto;
@@ -559,4 +560,9 @@ div.papers li{
 
 .nodot li{
 	list-style-type: none;
+}
+
+.inline > p{
+	margin-top: 1em;
+	margin-bottom: 0;
 }
