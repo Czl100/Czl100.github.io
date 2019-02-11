@@ -1,12 +1,12 @@
 $(document).ready(function(){
     //<!--图像集-->
-    var theme_title='<div><a href="index.html"><img src="images/headimg.png"></a></div>\
-    <div class="logo"><a href="index.html"><img src="images/qcs2.jpg" alt="IWDW2019"/></a></div>\
+    var theme_title='<div><a href="index.html"><img src="images/headimg.png" title="Home"></a></div>\
+    <div class="logo"><a href="index.html"><img src="images/qcs2.jpg" alt="IWDW2019" title="Home"/></a></div>\
     <div class="slider">\
         <div class="conbox">\
-            <div><img src="images/1.jpg"/></div>\
-            <div><img src="images/2.jpg" /></div>\
-            <div><img src="images/xm.jpg" /></div>\
+            <div><img src="images/1.jpg" title="Sight"/></div>\
+            <div><img src="images/2.jpg" title="Sight"/></div>\
+            <div><img src="images/xm.jpg" title="Sight"/></div>\
         </div>\
         <div class="switcher">\
             <a href="#" class="cur">1</a>\
@@ -103,8 +103,8 @@ $(document).ready(function(){
         <hr width="100%" noshade id="line-gray"/>\
         <div id="sponsor">\
             <ul>\
-                <li><a href="https://www.springer.com/gp"><img src="images/springer.png"/></a></li>\
-                <li><a href="http://www.scu.edu.cn/"><img src="images/scu.png" /></a></li>\
+                <li><a href="https://www.springer.com/gp"><img src="images/springer.png"  title="Springer"/></a></li>\
+                <li><a href="http://www.scu.edu.cn/"><img src="images/scu.png" title="Sichuan University"/></a></li>\
                 <li style="display:inline-block;width:100%;height:0"></li>\
             </ul>\
         </div>\

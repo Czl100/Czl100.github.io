@@ -566,3 +566,12 @@ div.papers li{
 	margin-top: 1em;
 	margin-bottom: 0;
 }
+
+.float-right{
+	float: right;
+	margin-left: 0.5em;
+}
+
+.clear-float{
+	clear: both;
+}
