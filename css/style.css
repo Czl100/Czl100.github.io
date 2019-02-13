@@ -69,8 +69,8 @@ table td{
 }
 
 
-.body-wrapper{
-	width:960px; 
+div#main, .body-wrapper{
+	width:1040px; 
 	height:auto; 
 	margin:auto;	
 }
@@ -262,29 +262,37 @@ table td{
 	color:#FFF;
 }
 
+/*logo图像*/
+.head-img, .head-img img{
+	width: 100%;
+}
 .theme-title{
 	margin-bottom: 1em;
-	width:960px;
+	width:100%;
 	height:395px;	
 	cursor: pointer;
 }
 .theme-title .logo{
-	width:640px; 
+	width:70%;
 	height:300px; 
 	float:left;
 	position:relative; 
 }
+.logo img{
+	width: 100%;
+	height: 100%;
+}
 
 .theme-title .slider{ 
-	width:320px;
+	width:30%;
 	height:300px;
 	background-color:#C6F;
 	position:relative;
 	float:right;
 }
-.conbox img{ 
-	width:320px; 
-	height:300px;
+.conbox, .conbox, .conbox div, .conbox img{ 
+	width: 100%; 
+	height: 100%;
 }
 .switcher{
 	position:absolute;

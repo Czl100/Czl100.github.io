@@ -1,6 +1,7 @@
 $(document).ready(function(){
     //<!--图像集-->
-    var theme_title='<div><a href="index.html"><img src="images/headimg.png" title="Home"></a></div>\
+    var theme_title='<div class="head-img"><a href="index.html"><img src="images/headimg.png" title="Home"></a></div>\
+    <div style="width:inherit">\
     <div class="logo"><a href="index.html"><img src="images/qcs2.jpg" alt="IWDW2019" title="Home"/></a></div>\
     <div class="slider">\
         <div class="conbox">\
@@ -12,8 +13,8 @@ $(document).ready(function(){
             <a href="#" class="cur">1</a>\
             <a href="#">2</a>\
             <a href="#">3</a>\
-        </div>\
-    </div>';    
+        </div></div>\
+    </div>';
     $('.theme-title').html(theme_title);
 
     //导航栏
