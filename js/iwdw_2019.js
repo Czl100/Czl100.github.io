@@ -65,11 +65,11 @@ $(document).ready(function(){
     var prework='<ul class="prework">\
     <li><a href="http://iwdw2018.org/">IWDW 2018</a></li>\
     <li><a href="https://iwdw2017.cs.ovgu.de/cms/front_content.php">IWDW 2017</a></li>\
-    <li><a href="http://www.iwdw.net/home.html">IWDW 2016</a></li>\
+    <li><a href="resource/CFP_IWDW2016.pdf">IWDW 2016</a></li>\
     <li><a href="https://www.i.h.kyoto-u.ac.jp/site/iwdw2015/">IWDW 2015</a></li>\
-    <li><a href="http://iwdw2014.ntub.edu.tw/">IWDW 2014</a></li>\
-    <li><a href="http://staff.elena.aut.ac.nz/Wei-Yan/iwdw2013">IWDW 2013</a></li>\
-    <li><a href="http://iwdw.net/IWDW2012-CFP.pdf">IWDW 2012</a></li>\
+    <li><a href="resource/CFP_IWDW2014.pdf">IWDW 2014</a></li>\
+    <li><a href="resource/CFP_IWDW2013.pdf">IWDW 2013</a></li>\
+    <li><a href="resource/CFP_IWDW2012.pdf">IWDW 2012</a></li>\
     <li><a href="https://web.njit.edu/~shi/iwdw11">IWDW 2011</a></li>\
     </ul>';
 
@@ -98,13 +98,13 @@ $(document).ready(function(){
     $(".content-home").html(papers);
     });
 
-    
+    // sponsor
     var sponsors='<div id="bottom">\
         <hr width="100%" noshade id="line-gray"/>\
         <div id="sponsor">\
             <ul>\
                 <li><a href="https://www.springer.com/gp"><img src="images/springer.png"  title="Springer"/></a></li>\
-                <li><a href="http://www.scu.edu.cn/"><img src="images/scu.png" title="Sichuan University"/></a></li>\
+                <li><a href="http://www.scu.edu.cn/"><img src="images/sichuan.jpg" title="Sichuan University"/></a></li>\
                 <li style="display:inline-block;width:100%;height:0"></li>\
             </ul>\
         </div>\
