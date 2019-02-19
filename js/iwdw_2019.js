@@ -49,7 +49,7 @@ $(document).ready(function(){
     //添加 Special Sessions
     var special_sessions='<div class="textbox">\
         <h2>Special Sessions</h2>\
-        <hr width="100%" noshade id="line"/>\
+        <hr class="line">\
         <div class="text indentation">\
             <p>Special session proposals are invited to IWDW 2019, and inquiries regarding your submission should be directed to the General Chair.\
                 The proposal needs to be submitted to the General Chair (Hongxia Wang, <a>hxwang@scu.edu.cn</a>) by 1 July, 2019.</p>\
@@ -85,7 +85,7 @@ $(document).ready(function(){
     var papers=
     '<div class="textbox papers">\
     <h2>List of Accepted Papers</h2>\
-    <hr width="100%" noshade id="line"/>\
+    <hr class="line">\
     <ul>\
         <li>*********</li>\
         <li>*********</li>\
@@ -101,7 +101,7 @@ $(document).ready(function(){
 
     // sponsor
     var sponsors='<div id="bottom">\
-        <hr width="100%" noshade id="line-gray"/>\
+        <hr width="100%" noshade class="line-gray"/>\
         <div id="sponsor">\
             <ul>\
                 <li><a href="https://www.springer.com/gp"><img src="images/springer.png"  title="Springer"/></a></li>\
