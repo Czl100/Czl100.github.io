@@ -1,4 +1,22 @@
 $(document).ready(function(){
+    //head 添加meta
+    var headele = document.getElementsByTagName("head")[0];
+    var newNode = document.createElement("meta");
+    newNode.setAttribute("name", "viewport");
+    newNode.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1");
+    headele.appendChild(newNode);
+
+    newNode = document.createElement("meta");
+    newNode.setAttribute("name", "keywords");
+    newNode.setAttribute("content", "IWDW2019, IWDW 2019, iwdw, 2019, meeting");
+    headele.appendChild(newNode);
+
+    // 修改title
+    document.title = "IWDW2019";
+    var descrp = "IWDW2019, IWDW, 2019, IWDW 2019,meeting, IWDW2019 IWDW 2019 The 18th International Workshop on Digital-forensics and Watermarking (IWDW 2019), Chengdu, China";    
+    $('meta[name="description"]').attr("content", descrp);
+    
+//-------------------------------------------------------------------------
     //<!--图像集-->
     var theme_title='<div class="head-img"><a href="index.html"><img src="images/headimg.png" title="IWDW2019"></a></div>\
     <div id="sub-logimg" style="width:inherit">\
@@ -138,7 +156,7 @@ window.onload = function(){
     // 显示log图像
     document.getElementById("sub-logimg").removeAttribute("id");
     var tmpNode = document.getElementById("tmp-img");
-    tmpNode.parentNode.removeChild(tmpNode);
+    tmpNode.parentNode.removeChild(tmpNode);        
 }
 
 
