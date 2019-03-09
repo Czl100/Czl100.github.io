@@ -268,7 +268,7 @@ div#main, .body-wrapper{
 .theme-title{
 	margin-bottom: 1em;
 	width:100%;
-	height:395px;	
+	height:auto;	
 	cursor: pointer;
 }
 .theme-title .logo{
@@ -512,7 +512,7 @@ a {
 .nav ul li a span {
 	margin: 0;
 	padding: 0;
-	border: 0;	
+	border: 0;
 }
 .nav ul li,
 .nav ul li a,
@@ -585,4 +585,13 @@ div.papers li{
 
 #sub-logimg {
 	display: none;
+}
+
+/*图像集处理*/
+div.theme-title, div.theme-title *{
+	margin: 0;
+	padding: 0;
+}
+div.theme-title {
+	margin-bottom: 1em;
 }

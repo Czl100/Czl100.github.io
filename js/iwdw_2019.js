@@ -154,9 +154,17 @@ $(document).ready(function(){
 
 window.onload = function(){
     // 显示log图像
-    document.getElementById("sub-logimg").removeAttribute("id");
+    document.getElementById("sub-logimg").setAttribute("style", "display:block;");
     var tmpNode = document.getElementById("tmp-img");
-    tmpNode.parentNode.removeChild(tmpNode);        
+    tmpNode.parentNode.removeChild(tmpNode);
+    
+
+    setInterval(function(){
+        var htmlWidth = $("div.head-img").width();
+        $("div#sub-logimg").width(htmlWidth).height(0.3*htmlWidth);
+        $("div.logo").width(0.7*htmlWidth).height(0.3*htmlWidth);
+        $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);
+    }, 100);    
 }
 
 
