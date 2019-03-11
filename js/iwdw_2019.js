@@ -3,7 +3,7 @@ $(document).ready(function(){
     var headele = document.getElementsByTagName("head")[0];
     var newNode = document.createElement("meta");
     newNode.setAttribute("name", "viewport");
-    newNode.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1");
+    newNode.setAttribute("content", "width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1");
     headele.appendChild(newNode);
 
     newNode = document.createElement("meta");
@@ -164,35 +164,5 @@ window.onload = function(){
         $("div#sub-logimg").width(htmlWidth).height(0.3*htmlWidth);
         $("div.logo").width(0.7*htmlWidth).height(0.3*htmlWidth);
         $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);
-    }, 100);    
+    }, 100);		
 }
-
-
-/*
-    <li class="cfp">\
-        <a  href="callPaper.html"><span>Call for Papers</span></a>\
-        <ul class="submenu">\
-            <li><a href="callPaper.html">Call for papers</a></li>\
-            <li><a href="submission.html">Submission of papers</a></li>\
-            <li><a href="paperRe.html">Paper Review</a></li>\
-        </ul>\
-    </li>\
-
-    <li class="program">\
-        <a  href="#"><span>Program</span></a>\
-        <ul class="submenu">\
-            <li><a href="keynote.html">Keynote speakers</a></li>\
-            <li><a href="program.html">Program</a></li>\
-        </ul>\
-    </li>\
-
-    <li class="location">\
-        <a  href="#"><span>Local Information</span></a>\
-        <ul class="submenu">\
-            <li><a href="venueIn.html">Venue Information</a></li>\
-            <li><a href="accormado.html">Accommodation</a></li>\
-            <li><a href="transpor.html">Transportation</a></li>\
-            <li><a href="sight.html">Sightseeing</a></li>\
-        </ul>\
-    </li> -->\
- */

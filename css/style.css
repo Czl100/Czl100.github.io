@@ -307,10 +307,10 @@ div#main, .body-wrapper{
 	cursor:pointer;
 	float:left;
 	font-family:arial;
-	height:18px;
-	line-height:18px;
-	width:18px;
-	margin:4px;
+	height: 1.5em;
+	/*line-height:1em;*/
+	width: 1.5em;
+	margin: 0 1.5em;
 	text-align:center;
 	color:#1E1E1E;
 	border-radius:5px;
@@ -318,10 +318,9 @@ div#main, .body-wrapper{
 .switcher a.cur,.switcher a:hover{
 	background:#005784;
 	border:1px solid #005784;
-	height:24px;
-	line-height:24px;
-	width:24px;
-	margin:0 2px;
+	height:1.5em;
+	/*line-height:1.5em;*/
+	width: 1.5em;	
 	color:#fff;
 	font-weight:800;
 }
