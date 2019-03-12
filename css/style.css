@@ -132,9 +132,6 @@ div#main, .body-wrapper{
 	margin:10px 15px;
 }
 
-
-
-
 /* navbox */
 .navbox,
 .nav li.current a,
@@ -205,11 +202,13 @@ div#main, .body-wrapper{
 	background-position:0 -60px;
 	text-decoration:none;
 }
+.nav li.selected,
 .nav li.selected a span,
-.nav li a.selected span,
+.nav li.selected a,
 .nav li a span:hover{
 	background-position:100% -60px;
 	background-color: #2828ab;
+	/*2828ab*/
 }
 .nav li.selected .submenu{
 	display:block;
@@ -593,4 +592,9 @@ div.theme-title, div.theme-title *{
 }
 div.theme-title {
 	margin-bottom: 1em;
+}
+
+/*酒店图像*/
+#xiangyu-img, #shiwai-img {
+	width: 35%;
 }

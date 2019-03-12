@@ -1,24 +1,17 @@
-$(document).ready(function(){
+$(document).ready(function(){    
     //head 添加meta
-    var headele = document.getElementsByTagName("head")[0];
-    var newNode = document.createElement("meta");
-    newNode.setAttribute("name", "viewport");
-    newNode.setAttribute("content", "width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1");
-    headele.appendChild(newNode);
-
-    newNode = document.createElement("meta");
-    newNode.setAttribute("name", "keywords");
-    newNode.setAttribute("content", "IWDW2019, IWDW 2019, iwdw, 2019, meeting");
-    headele.appendChild(newNode);
+    console.log('iwdw_js ready');
+    $('title').after('<meta name="keywords" content="IWDW2019, IWDW 2019, iwdw, 2019, meeting">');
+    $('title').after('<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1">');        
 
     // 修改title
     document.title = "IWDW2019";
     var descrp = "IWDW2019, IWDW, 2019, IWDW 2019,meeting, IWDW2019 IWDW 2019 The 18th International Workshop on Digital-forensics and Watermarking (IWDW 2019), Chengdu, China";    
     $('meta[name="description"]').attr("content", descrp);
-    
-//-------------------------------------------------------------------------
-    //<!--图像集-->
-    var theme_title='<div class="head-img"><a href="index.html"><img src="images/headimg.png" title="IWDW2019"></a></div>\
+
+//-------------------------------------------------------------------------    
+    // 图像集
+    var theme_title = '<div class="head-img"><a href="index.html"><img src="images/headimg.png" title="IWDW2019"></a></div>\
     <div id="sub-logimg" style="width:inherit">\
     <div class="logo"><a href="index.html"><img src="images/qcs2.jpg" alt="IWDW2019" title="IWDW2019"/></a></div>\
     <div class="slider">\
@@ -34,38 +27,44 @@ $(document).ready(function(){
         </div>\
     </div>\
     </div>\
-    <div id="tmp-img"><img  style="width:100%; height:300px" src="images/loading.png"></div>';    
-    $('.theme-title').html(theme_title);
+    <div id="tmp-img"><img  style="width:100%; height:300px" src="images/loading.png"></div>'; 
 
+    $('.theme-title').html(theme_title);
+        
     //导航栏
     var navbox='<div class="nav" id="smoothmenu1">\
-            <ul class="clearfix">\
-                <li class="selected home"><a href="index.html"><span>Home</span></a></li>\
-                <li class="committee">\
-                    <a  href="Committee.html"><span>Program Committee</span></a></li>\
-                <li class="keynote">\
-                    <a  href="keynote.html"><span>Invited Speakers</span></a></li>\
-                <li class="submission">\
-                    <a  href="callPaper.html"><span>Submission</span></a></li>\
-                <li class="navspecial-sessions">\
-                    <a  href="#"><span>Special Sessions</span></a></li>\
-                <li class="navpaperlist">\
-                    <a  href="#"><span>List of Accepted Papers</span></a></li>\
-                <li class="registration">\
-                    <a  href="regist.html"><span>Registration</span></a></li>\
-                <li class="program">\
-                    <a  href="program.html"><span>Technical Program</span></a></li>\
-                <li class="venue">\
-                    <a  href="accormado.html"><span>Venue & Accommodation</span></a></li>\
-                <li class="sight">\
-                    <a  href="sight.html"><span>Sightseeing</span></a></li>\
-                <li class="navprework">\
-                    <a href="#"><span>Previous Workshops</span></a>\
-                </li>\
-            </ul>\
-        </div>';
-    $('.navbox').html(navbox);
-
+    <ul class="clearfix">\
+        <li class="selected home"><a href="index.html"><span>Home</span></a></li>\
+        <li class="committee">\
+            <a  href="Committee.html"><span>Program Committee</span></a></li>\
+        <li class="keynote">\
+            <a  href="keynote.html"><span>Invited Speakers</span></a></li>\
+        <li class="submission">\
+            <a  href="callPaper.html"><span>Submission</span></a></li>\
+        <li class="navspecial-sessions">\
+            <a  href="#"><span>Special Sessions</span></a></li>\
+        <li class="navpaperlist">\
+            <a  href="#"><span>List of Accepted Papers</span></a></li>\
+        <li class="registration">\
+            <a  href="regist.html"><span>Registration</span></a></li>\
+        <li class="program">\
+            <a  href="program.html"><span>Technical Program</span></a></li>\
+        <li class="venue">\
+            <a  href="accormado.html"><span>Venue & Accommodation</span></a></li>\
+        <li class="sight">\
+            <a  href="sight.html"><span>Sightseeing</span></a></li>\
+        <li class="navprework">\
+            <a href="#"><span>Previous Workshops</span></a>\
+        </li>\
+    </ul>\
+    </div>';
+    if(document.documentElement.clientWidth > 460){
+        $('.navbox').html(navbox);        
+    }
+    else{
+        mobile_nav();
+    }
+        
     //添加 Special Sessions
     var special_sessions='<div class="textbox">\
         <h2>Special Sessions</h2>\
@@ -145,10 +144,6 @@ $(document).ready(function(){
     $(".slider").click(function(){
         window.location.href="sight.html";
     });
-    
-
-    //删除子菜单
-    $(".clearfix li ul").remove();
 });
 
 
@@ -158,11 +153,93 @@ window.onload = function(){
     var tmpNode = document.getElementById("tmp-img");
     tmpNode.parentNode.removeChild(tmpNode);
     
-
-    setInterval(function(){
+    function resizeEvent(){
         var htmlWidth = $("div.head-img").width();
         $("div#sub-logimg").width(htmlWidth).height(0.3*htmlWidth);
         $("div.logo").width(0.7*htmlWidth).height(0.3*htmlWidth);
-        $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);
-    }, 100);		
+        $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);        
+    }
+    window.onresize = resizeEvent;    
+    resizeEvent();
+}
+
+// 移动端导航栏
+function mobile_nav(){
+    $('div#main, div.body-wrapper').css("width", "100%");
+    $("div.navbox").remove();
+    $('div.switcher').remove();
+    
+    var navbox='<div class="navbox" id="smoothmenu1">\
+    <ul class="clearfix">\
+        <li class="selected home"><a href="index.html"><span>Home</span></a></li>\
+        <li class="committee">\
+            <a  href="Committee.html"><span>Program Committee</span></a></li>\
+        <li class="submission">\
+            <a  href="callPaper.html"><span>Submission</span></a></li>\
+        <li class="registration">\
+            <a  href="regist.html"><span>Registration</span></a></li>\
+        <li class="program">\
+            <a  href="program.html"><span>Technical Program</span></a></li>\
+        <li class="venue">\
+            <a  href="accormado.html"><span>Venue & Accommodation</span></a></li>\
+        <li class="sight">\
+            <a  href="sight.html"><span>Sightseeing</span></a></li>\
+        <li class="navprework">\
+            <a href="#"><span>Previous Workshops</span></a>\
+        </li>\
+    </ul>\
+    </div>';
+    
+    $("div#table").before(navbox);
+    
+    // 设置样式
+    $('div.theme-title').css("margin-bottom", "0px");
+    
+    $("div.navbox").css({
+        "display": "block",
+        "margin": "0 0 1em 0",
+        "padding": "0",
+        "width": "100%",
+        "height": "auto"
+    });
+    
+    $("div.navbox a").css("text-decoration", "none");
+    $("div.navbox > ul").css({    
+        "margin": "0",
+        "padding": "0",
+        'width': '100%',
+        "display": "flex",    
+        'flex-wrap': 'wrap',
+        'justify-content': 'space-between'
+    });
+    
+    
+    $("div.navbox li").css({
+        "text-align": "center",
+        'vertical-align': 'center'
+    });
+    
+    $('div.navbox > ul > li').css({    
+        "display": "inline-block",
+        //'float': 'left',
+        "flex": "auto",        
+        "background-color": "#6483d8",
+        "border-right": "solid 2px #2828ab",
+        "border-bottom": "solid 2px blue",
+        "width": "auto",
+        //"height": "2.5em"        
+    });
+    
+    $("div.navbox > ul > li *").css("width", "100%");
+    
+    $("div.navbox li ul").css({
+        "display": "none"
+    });
+    
+    $("div.navbox span").css({    
+        "color": "#FFF",
+        "font-size": "14px"
+    });
+
+    $('div.navbox > ul *').css('text-align', 'center');
 }
