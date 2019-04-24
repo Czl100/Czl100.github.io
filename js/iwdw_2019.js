@@ -59,7 +59,7 @@ $(document).ready(function(){
     </ul>\
     </div>';
     if(document.documentElement.clientWidth > 460){
-        $('.navbox').html(navbox);        
+        $('.navbox').html(navbox);
     }
     else{
         mobile_nav();
