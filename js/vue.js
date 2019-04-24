@@ -39,6 +39,7 @@ var tcps_arrays =[
 "Cheonshik Kim (Sejong University, Korea)",
 "Matthew Stamm (Drexel University, USA)",
 "Andreas Westfeld (HTW Dresden, Germany)",
+"Anja Keskinarkaus (University of Oulu, Finland)"
 ];
 
 // List of Accepted Papers
