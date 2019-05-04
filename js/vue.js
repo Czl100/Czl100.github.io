@@ -11,7 +11,6 @@ var tcps_arrays =[
 "Minoru Kuribayashi (Okayama University, Japan)",
 "Xiaolong Li (Beijing Jiaotong University, China)",
 "Chang-Tsun Li (Charles Sturt University, Australia)",
-"Ton Kalker (DTS, Inc., USA)",
 "Feng Liu (CAS, China)",
 "Rémi Cogranne (Troyes University of Technology, France)",
 "Xiangyang Luo (Information Engineering University, China)",
