@@ -134,16 +134,13 @@ $(document).ready(function(){
     });
 
     // sponsor
-    var sponsors='<div id="bottom">\
-        <hr width="100%" noshade class="line-gray"/>\
-        <div id="sponsor">\
-            <ul>\
+    var sponsors='<ul>\
                 <li><a href="https://www.springer.com/gp"><img src="images/springer.png"  title="Springer"/></a></li>\
+                <li><a href="http://www.cie-info.org.cn/"><img src="images/mesccie.png" title="Chinese Institute of Electronics"/></a></li>\
+                <li><a href="http://www.csig.org.cn/"><img src="images/csig.png"   title="CSIG"/></a></li>\
                 <li><a href="http://www.scu.edu.cn/"><img src="images/sichuan.jpg" title="Sichuan University"/></a></li>\
                 <li style="display:inline-block;width:100%;height:0"></li>\
-            </ul>\
-        </div>\
-        </div>';            
+            </ul>';
     $('.sponsors').html(sponsors);
 
     var footer='<p>Copyright(c) IWDW 2019 Conference committees. All rights reserved.</p>';
