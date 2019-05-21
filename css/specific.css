@@ -107,9 +107,9 @@ div.theme-title {
 	margin-right:auto;
 }
 
-.sponsors{
-    width: 50%;
-    margin: 0 auto;
+.sponsors{    
+    padding: 0 20%;
+    background-color: #FFF;
 }
 .sponsors > ul {
 	text-align:justify;
@@ -118,6 +118,14 @@ div.theme-title {
     display: inline-block;
     list-style-type: none;
     /* padding-right: 5em; */
+    width: 12%;
+}
+.sponsors img {
+    width: 100%;
+}
+/* li#springerlogo */
+#springerlogo {
+    width: 15%;
 }
 
 footer{
