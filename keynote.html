@@ -29,7 +29,42 @@
 				ctag: 'div'
 			});					
 		});
-	</script>
+    </script>
+    
+    <style>        
+        .speacker-table {
+            display: table;
+            width: 100%;
+        }
+        .speacker-tr {
+            display: table-row;
+        }
+        .speacker-left-col {
+            display: table-cell;
+            padding-top: 1.5em;
+            width: 20%;
+            vertical-align: top;
+        }
+        .speacker-right-col {
+            display: table-cell;
+            width: 80%;
+            padding-left: 1em;
+            vertical-align: top;
+        }
+        .speacker-img {
+            width: 100%;
+        }
+        .speacker-msg p{
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        .text {
+            padding: 0%;
+        }
+        .speacker-padding {
+            padding-left: 2em;
+        }
+    </style>
 </head>
 
 <body id="keynote">
@@ -41,37 +76,57 @@
 			<div id="table-row">
 
 			<!--导航栏-->
-			<div class="navbox"></div>
-			<div class="content-home">
-				
-				<br><h1>Invited Speakers</h1>
-				<hr class="line">
-				<h1>Under Construction . . .</h1>
-				<!--
-				<table>
-					<tr>
-						<td width="20%"><img src="images/Qiang_Yang.jpg" /></td>
-						<td>
-						<h3>Qiang Yang, Hong Kong University of Science and Technology, Hongkong </h3>
-						<div class="text">
-							<p>Qiang Yang is New Bright Professor of Engineering, Chair Professor and Head of Department of Computer Science and Engineering at Hong Kong University of Science and Technology. His research interests include Data Ming and Artificial Intelligence: Transfer Learning, Lifelong Machine Learning and Planning. He was selected as an IEEE Fellow for Significant Contributions to the Understanding and Application of Intelligent Planning, Learning and Data Mining in 2009.He was selected as an IAPR Fellow for significant contributions to Data Mining and Transfer Learning in 2012. He was selected as an AAAS Fellow for significant contributions to Data Mining, Learning and Planning: theory, applications, and services in 2012.He was selected as an AAAI Fellow for significant contributions to AI Planning, Data Mining and Case-based Reasoning in 2013.</p>
-						</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="20%"><img src="images/HuiLei.jpg" /></td>
-						<td>
-						<h3>Hui Lei, IBM USA </h3>
-						<div class="text">
-							<p>Hui Lei is Chief Technology Officer, Watson Health Cloud, at IBM, and is a member of the IBM Academy of Technology. He provides leadership on the Watson Health Cloud technical strategy, and spearheads the development of the Watson Health Cloud. The IBM strategic Watson Health Cloud brings together clinical, research and social data from diverse sources, supports advanced cognitive and analytic capabilities, empowers a wide spectrum of health solutions for enhancing and scaling human experiences, and delivers an open, secure and massively scalable innovation platform for ecosystem partners and clients.</p>
-						</div></td>
-					</tr>
-				</table>-->				
+            <div class="navbox"></div>
+            
+			<div class="content-home">				
+				<h1>Invited Speakers</h1>
+                <hr class="line">
+                				
+				<div class="speacker-table">
+					<div class="speacker-tr">
+                        <div class="speacker-left-col"><img class="speacker-img" src="images/yao-zhao.jpg" /></div>
+                        <div class="speacker-right-col">
+                                <div class="speacker-msg">
+                                    <p><b>Title:</b> Reversible Data Hiding</p>
+                                    <p><b>Speaker:</b> Yao Zhao</p>
+                                </div>
+                                <div class="text">
+                                    <p class="indentation">Yao Zhao received the Ph.D. degree from the Institute of Information Science, Beijing
+                                        Jiaotong University (BJTU),
+                                        Beijing, China, in 1996. He became an Associate Professor at BJTU in 1998 and became a Professor in 2001.
+                                        From 2001 to
+                                        2002, he was a Senior Research Fellow with the Information and Communication Theory Group, Faculty of
+                                        Information
+                                        Technology and Systems, Delft University of Technology, Delft, The Netherlands. In October 2015, he visited
+                                        the Swiss
+                                        Federal Institute of Technology, Lausanne, Switzerland (EPFL). From December 2017 to March 2018, he visited
+                                        the
+                                        University of Southern California. He is currently the Director of the Institute of Information Science,
+                                        BJTU. His
+                                        current research interests include image/video coding, digital watermarking and forensics, video analysis
+                                        and
+                                        understanding and artificial intelligence.
+                                    </p>
+                                    <p class="indentation">Dr. Zhao serves on the Editorial Boards of several international journals, including as
+                                        an Associate Editor of the IEEE
+                                        TRANSACTIONS ON CYBERNETICS, an Senior Associate Editor of the IEEE SIGNAL PROCESSING LETTERS, and an Area
+                                        Editor of
+                                        Signal Processing: Image Communication. He was named a Distinguished Young Scholar by the National Science
+                                        Foundation of
+                                        China in 2010, and was elected as a Chang Jiang Scholar of Ministry of Education of China in 2013. He is a
+                                        Fellow of the
+                                        IET.
+                                    </p>
+                                </div>                          
+                        </div>						
+                    </div>                    					
+                </div>                
 			</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 <hr width="100%" noshade class="line-gray"/>
 <div id='bottom'>
 	<div class="sponsors"></div>
