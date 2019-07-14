@@ -16,9 +16,9 @@ $(document).ready(function(){
     <div class="logo"><a href="index.html"><img src="images/qcs2.jpg" alt="IWDW2019" title="IWDW2019"/></a></div>\
     <div class="slider">\
         <div class="conbox">\
+            <div><img src="images/xm.jpg" title="Sight"/></div>\
             <div><img src="images/1.jpg" title="Sight"/></div>\
             <div><img src="images/2.jpg" title="Sight"/></div>\
-            <div><img src="images/xm.jpg" title="Sight"/></div>\
         </div>\
         <div class="switcher">\
             <a href="#" class="cur">1</a>\
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     $('.theme-title').html(theme_title);
         
-    //导航栏
+    // 导航栏
     var navbox='<div class="nav" id="smoothmenu1">\
     <ul class="clearfix">\
         <li class="selected home"><a href="index.html"><span>Home</span></a></li>\
@@ -80,7 +80,7 @@ $(document).ready(function(){
         mobile_nav();
     }
         
-    //添加 Special Sessions
+    // 添加 Special Sessions
     var special_sessions='<div class="textbox">\
         <h2>Special Sessions</h2>\
         <hr class="line">\
@@ -96,7 +96,7 @@ $(document).ready(function(){
         $(".content-home").html(special_sessions);
     });
 
-    //添加 previous Work
+    // 添加 previous Work
     var prework='<ul class="prework">\
     <li><a href="http://iwdw2018.org/">IWDW 2018</a></li>\
     <li><a href="https://iwdw2017.cs.ovgu.de/cms/front_content.php">IWDW 2017</a></li>\
@@ -146,13 +146,13 @@ $(document).ready(function(){
     var footer='<p>Copyright(c) IWDW 2019 Conference committees. All rights reserved.</p>';
     $('footer').html(footer);
 
-    //导航栏高亮
+    // 导航栏高亮
     var elid = $('body').attr('id') || 'home';
     elid = '.' + elid;
     $('.clearfix').children('.selected').removeClass('selected');    
     $('.clearfix').children(elid).addClass('selected');
 
-    //风景照链接
+    // 风景照链接
     $(".slider").click(function(){
         window.location.href="sight.html";
     });
