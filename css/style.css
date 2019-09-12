@@ -144,12 +144,12 @@ div#main, .body-wrapper{
 	position:relative;
 	background: #FFF;
 	width:22%;
-	height:49px;
+  /* height: */
+  min-height:49px;
 	background-position:0 -138px;
 	background-repeat:repeat-x;
-	
 	z-index:99;
-	list-style-type:none;	
+  list-style-type:none;	
 }
 
 #table-row {

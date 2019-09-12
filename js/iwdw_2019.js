@@ -59,7 +59,7 @@ $(document).ready(function(){
         <li class="navspecial-sessions">\
             <a  href="#"><span>Special Sessions</span></a></li>\
         <li class="navpaperlist">\
-            <a  href="#"><span>List of Accepted Papers</span></a></li>\
+            <a  href="paper-lists.html"><span>List of Accepted Papers</span></a></li>\
         <li class="registration">\
             <a  href="regist.html"><span>Registration</span></a></li>\
         <li class="program">\
@@ -75,8 +75,7 @@ $(document).ready(function(){
     </div>';
     if(document.documentElement.clientWidth > 460){
         $('.navbox').html(navbox);
-    }
-    else{
+    }else{
         mobile_nav();
     }
         
@@ -109,29 +108,29 @@ $(document).ready(function(){
     </ul>';
 
     $(".navprework").click(function(){
-    $('.clearfix').children('.selected').removeClass('selected');
-    $('.clearfix').children('.navprework').addClass('selected');
-    $(".content-home").removeClass().addClass('content-home');
-    $(".content-home").html(prework);
+      $('.clearfix').children('.selected').removeClass('selected');
+      $('.clearfix').children('.navprework').addClass('selected');
+      $(".content-home").removeClass().addClass('content-home');
+      $(".content-home").html(prework);
     });
 
-    // list of papers 改用Vue实现
+    /*********** list of papers 改用Vue实现 ********************
     var papers=
     '<div class="textbox papers">\
     <h2>List of Accepted Papers</h2>\
     <hr class="line">\
     <ul>\
-        <li>*********</li>\
+        <li>*******少时诵诗书**</li>\
         <li>*********</li>\
         <li>*********</li>\
     </ul>\
     </div>';
     $(".navpaperlist").click(function(){
-    $('.clearfix').children('.selected').removeClass('selected');
-    $('.clearfix').children('.navpaperlist').addClass('selected');
-    $(".content-home").removeClass().addClass('content-home');
-    $(".content-home").html(papers);
-    });
+      $('.clearfix').children('.selected').removeClass('selected');
+      $('.clearfix').children('.navpaperlist').addClass('selected');
+      $(".content-home").removeClass().addClass('content-home');
+      // $(".content-home").html(papers);
+    });*/ 
 
     // sponsor
     var sponsors='<ul>\
@@ -169,9 +168,23 @@ window.onload = function(){
         var htmlWidth = $("div.head-img").width();
         $("div#sub-logimg").width(htmlWidth).height(0.3*htmlWidth);
         $("div.logo").width(0.7*htmlWidth).height(0.3*htmlWidth);
-        $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);        
+        $("div.slider").width(0.3*htmlWidth).height(0.3*htmlWidth);
+        console.log('call!');
     }
-    window.onresize = resizeEvent;    
+
+    // 函数节流
+    function throttle(fn){
+      fn._timer = false;
+      return function(e){
+        if(!fn._timer){
+          fn._timer = setTimeout(function(){
+            fn();
+            fn._timer = false;
+          }, 500);
+        }
+      }
+    }
+    window.onresize = throttle(resizeEvent);
     resizeEvent();
 }
 
