@@ -48,7 +48,12 @@ div.nav ul li a span {
 	padding-left: 2%;
 }
 
-
+/* 移动端导航栏样式 */
+.nav td.selected,
+.nav td:hover{
+	background-position:100% -60px;
+	background-color: #2828ab;
+}
 
 ul.prework li {
 	padding-bottom: 1em;
@@ -139,8 +144,17 @@ footer{
 	text-align: center;
 }
 
-
 .home table{
 	border: 1px solid #8A8A8A;
 	padding-left:3%;
+}
+
+/* 修复图像滚动 */
+.slider .conbox{
+  position: relative;
+}
+.conbox > div, .conbox img{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
