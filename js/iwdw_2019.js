@@ -1,6 +1,6 @@
 $(document).ready(function () {
+  console.log('ready')
   //head 添加meta
-  console.log('iwdw_js ready');
   $('title').after('<meta name="keywords" content="IWDW2019, IWDW 2019, iwdw, 2019, meeting">');
   $('title').after('<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1">');
 
@@ -41,12 +41,9 @@ $(document).ready(function () {
         <div class="sk-circle11 sk-circle"></div>\
         <div class="sk-circle12 sk-circle"></div>\
     </div>';
-  /* <div id="tmp-img"><img  style="width:100%; height:300px" src="images/loading.png"></div>'; */
+  $('.theme-title').html(theme_title);  
 
-
-  $('.theme-title').html(theme_title);
-
-  // 导航栏
+  /**************** 导航栏 **************************************/
   var navbox = '<div class="nav" id="smoothmenu1">\
     <ul class="clearfix">\
         <li class="selected home"><a href="index.html"><span>Home</span></a></li>\
@@ -114,24 +111,6 @@ $(document).ready(function () {
     $(".content-home").html(prework);
   });
 
-  /*********** list of papers 改用Vue实现 ********************
-  var papers=
-  '<div class="textbox papers">\
-  <h2>List of Accepted Papers</h2>\
-  <hr class="line">\
-  <ul>\
-      <li>*******少时诵诗书**</li>\
-      <li>*********</li>\
-      <li>*********</li>\
-  </ul>\
-  </div>';
-  $(".navpaperlist").click(function(){
-    $('.clearfix').children('.selected').removeClass('selected');
-    $('.clearfix').children('.navpaperlist').addClass('selected');
-    $(".content-home").removeClass().addClass('content-home');
-    // $(".content-home").html(papers);
-  });*/
-
   // sponsor
   var sponsors = '<ul>\
                 <li><a href="http://www.scu.edu.cn/"><img src="images/sichuan.jpg" title="Sichuan University"/></a></li>\
@@ -147,23 +126,23 @@ $(document).ready(function () {
 
   // 导航栏高亮
   var elid = $('body').attr('id') || 'home';
-  elid = '.' + elid;  
+  elid = '.' + elid;
   document.querySelector('.nav .selected').classList.remove('selected');
-  document.querySelector('.nav '+ elid).classList.add('selected');
+  document.querySelector('.nav ' + elid).classList.add('selected');
 
   // 风景照链接
   $(".slider").click(function () {
     window.location.href = "sight.html";
-  });
-});
+  });  
 
+  /***************** 移除加载动画 **********************************/    
+  document.querySelector('.logo img').onload = function () {
+    document.getElementById("sub-logimg").setAttribute("style", "display:block;");
+    var tmpNode = document.getElementById("tmp-img");
+    tmpNode.parentNode.removeChild(tmpNode);
+    resizeEvent();
+  }
 
-window.onload = function () {
-  // 显示log图像
-  document.getElementById("sub-logimg").setAttribute("style", "display:block;");
-  var tmpNode = document.getElementById("tmp-img");
-  tmpNode.parentNode.removeChild(tmpNode);
-  
   // 函数节流
   function throttle(fn) {
     fn._timer = false;
@@ -183,8 +162,7 @@ window.onload = function () {
     $("div.slider").width(0.3 * htmlWidth).height(0.3 * htmlWidth);
   }
   window.onresize = throttle(resizeEvent);
-  resizeEvent();
-}
+});
 
 // 移动端导航栏
 function mobile_nav() {
@@ -230,7 +208,7 @@ function mobile_nav() {
   $('.content-home').css({
     "padding": "0 5px"
   });
-  document.querySelector('.conbox').firstElementChild.setAttribute('style','z-index: 1');
+  document.querySelector('.conbox').firstElementChild.setAttribute('style', 'z-index: 1');
 
   $('div.theme-title').css("margin-bottom", "0px");
   $("div.navbox").css({
