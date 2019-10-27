@@ -34,13 +34,14 @@
   </script>
 
   <style>
-    .speacker-table {
-      display: table;
-      width: 100%;
+    .speacker-contain {      
+      overflow: hidden;      
     }
 
-    .speacker-tr {
-      display: table-row;
+    .speacker-item {
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 2em;
     }
 
     .speacker-left-col {
@@ -50,19 +51,20 @@
       vertical-align: top;
     }
 
-    .speacker-right-col {
-      display: table-cell;
-      width: 80%;
-      padding-left: 1em;
-      vertical-align: top;
+    .speacker-right-col {      
+      
+      
     }
 
     .speacker-img {
-      width: 100%;
+      width: 20%;
+      float: left;
+      margin-right: 1em;
     }
 
-    .speacker-msg p {
+    .speacker-msg > p {
       font-size: 1.2em;
+      margin-top: 0;
       margin-bottom: 1em;
     }
 
@@ -91,10 +93,10 @@
             <h1>Invited Speakers</h1>
             <hr class="line">
 
-            <div class="speacker-table">
-              <div class="speacker-tr">
-                <div class="speacker-left-col"><img class="speacker-img" src="images/yao-zhao.jpg" alt="yao-zhao" />
-                </div>
+            <div class="speacker-contain">
+              <div class="speacker-item">
+                <!-- <div class="speacker-left-col"></div> -->
+                <img class="speacker-img" src="images/yao-zhao.jpg" alt="yao-zhao" />
                 <div class="speacker-right-col">
                   <div class="speacker-msg">
                     <p><b>Title:</b> Reversible Data Hiding</p>
@@ -141,9 +143,9 @@
                   </div>
                 </div>
               </div>
-              <div class="speacker-tr">
-                <div class="speacker-left-col"><img class="speacker-img" src="images/Xiangui-Kang.jpg"
-                    alt="Xiangui-Kang" /></div>
+              <div class="speacker-item">
+                <!-- <div class="speacker-left-col"></div> -->
+                <img class="speacker-img" src="images/Xiangui-Kang.jpg" alt="Xiangui-Kang" />
                 <div class="speacker-right-col">
                   <div class="speacker-msg">
                     <p><b>Title:</b> Approaching Optimal Embedding with GAN</p>
@@ -172,9 +174,9 @@
                   </div>
                 </div>
               </div>
-              <div class="speacker-tr">
-                <div class="speacker-left-col"><img class="speacker-img" src="images/Pedro Comesaña-Alfaro.jpg" 
-                  alt="Pedro Comesaña-Alfaro" /></div>
+              <div class="speacker-item">
+                <!-- <div class="speacker-left-col"></div> -->
+                <img class="speacker-img" src="images/Pedro Comesaña-Alfaro.jpg" alt="Pedro Comesaña-Alfaro" />
                 <div class="speacker-right-col">
                   <div class="speacker-msg">
                     <p><b>Title:</b> On the sensitivity of DC-QIM to scaling: Can a weakness become a positive characteristic?</p>
